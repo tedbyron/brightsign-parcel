@@ -1,0 +1,17 @@
+{
+  "collapseWhitespace": "aggressive",
+  "removeRedundantAttributes": true,
+  "mergeStyles": true,
+  "minifyCss": {
+    "preset": [
+      "advanced",
+      {
+        "discardComments": {
+          "removeAll": true
+        }
+      }
+    ]
+  },
+  "minifyConditionalComments": true,
+  "removeOptionalTags": true
+}
