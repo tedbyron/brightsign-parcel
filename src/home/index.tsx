@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './app'
+import IndexPage from './page'
+import '../index.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <IndexPage />
   </React.StrictMode>,
   document.getElementById('root')
 )

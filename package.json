@@ -4,46 +4,40 @@
   "author": "Teddy Byron <ted@tedbyron.com>",
   "private": true,
   "packageManager": "yarn@3.1.1",
-  "web": "dist/web.html",
-  "api": "dist/api.js",
+  "browserslist": "chrome 60",
+  "engines": {
+    "node": ">= 10"
+  },
   "targets": {
-    "web": {
-      "source": "src/index.html",
+    "home": {
+      "source": "src/home/index.html",
       "context": "browser",
-      "outputFormat": "esmodule",
-      "sourceMap": false,
+      "includeNodeModules": {},
       "publicUrl": "."
     },
     "api": {
       "source": "api/index.ts",
       "context": "node",
-      "outputFormat": "commonjs",
       "includeNodeModules": {
         "@brightsign/networkstatus": false
-      },
-      "sourceMap": false
+      }
     }
-  },
-  "browserslist": "chrome >= 65",
-  "engines": {
-    "node": ">= 10"
   },
   "ts-standard": {
     "project": "./tsconfig.json"
   },
   "scripts": {
-    "build": "rimraf dist/*; parcel build --target web --target api",
-    "build:web": "rimraf dist/web*; parcel build --target web",
-    "build:api": "rimraf dist/api*; parcel build --target api",
-    "serve": "rimraf dist/web*; parcel serve --target web --open",
-    "watch": "rimraf dist/api*; parcel watch --target api",
-    "tsc": "tsc --noemit",
-    "tsc:watch": "tsc --noemit --watch",
+    "build": "rimraf dist/*; parcel build --no-source-maps",
+    "serve": "rimraf dist/home*; parcel serve --target home --open --lazy",
+    "watch": "rimraf dist/*; parcel watch",
+    "clean": "rimraf dist; rimraf .parcel-cache",
     "lint": "ts-standard --report stylish",
-    "lint:fix": "ts-standard --report stylish --fix"
+    "lint-fix": "ts-standard --report stylish --fix"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "express": "^4.17.2",
+    "p-retry": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -57,7 +51,6 @@
     "@types/node": "^17.0.10",
     "@types/react": "^17",
     "@types/react-dom": "^17",
-    "@types/rimraf": "^3",
     "autoprefixer": "^10.4.2",
     "cssnano-preset-advanced": "^5.1.10",
     "parcel": "^2.2.1",

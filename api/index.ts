@@ -35,12 +35,16 @@ type NetworkStatusIpAddress = Readonly<{
 }>
 
 const ns = new NetworkStatus()
-const filteredProcess = Object.fromEntries(Object.entries(process).filter(([key, _val]) => {
-  return ['version', 'versions', 'arch', 'platform', 'release', 'features', 'env', 'title', 'argv', 'execArgv', 'pid', 'ppid', 'execPath', 'debugPort', 'argv0'].includes(key)
-}))
+
+const app = express()
+const port = 9001
+
+const wantedProcess = ['version', 'versions', 'arch', 'platform', 'release', 'features', 'env', 'title', 'argv', 'execArgv', 'pid', 'ppid', 'execPath', 'debugPort', 'argv0']
+const filteredProcess: { [key: string]: any } =
+  Object.entries(process).filter(([key]) => wantedProcess.includes(key))
 
 /**
- * Query a BrightSign's network status.
+* Query a BrightSign's network status.
  * @returns A list of network interfaces and their statuses.
  */
 async function getInterfaceStatuses (): Promise<NetworkInterfaceStatus[]> {
@@ -51,9 +55,6 @@ async function getInterfaceStatuses (): Promise<NetworkInterfaceStatus[]> {
   }))
 }
 
-const app = express()
-const port = 9001
-
 app.use('/sd', express.static('/storage/sd')) // SD card filesystem
 
 // Listen for GET requests at `/networkstatus` and return the list of network
@@ -61,7 +62,7 @@ app.use('/sd', express.static('/storage/sd')) // SD card filesystem
 app.get('/network', (_req, res) => {
   getInterfaceStatuses().then((statuses: NetworkInterfaceStatus[]) => {
     res.json(statuses)
-  }).catch((err: Error) => {
+  }).catch((err) => {
     console.error(err)
     res.status(404).json(err)
   })
@@ -77,5 +78,5 @@ app.get('/node', (_req, res) => {
 
 // Start the API server on `port`.
 app.listen(port, () => {
-  console.log(`listening on port ${port}`)
+  console.log(`API server listening on port ${port}`)
 })
