@@ -513,6 +513,96 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/css-darwin-arm64@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@parcel/css-darwin-arm64@npm:1.1.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/css-darwin-x64@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@parcel/css-darwin-x64@npm:1.1.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/css-linux-arm-gnueabihf@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@parcel/css-linux-arm-gnueabihf@npm:1.1.0"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@parcel/css-linux-arm64-gnu@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@parcel/css-linux-arm64-gnu@npm:1.1.0"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/css-linux-arm64-musl@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@parcel/css-linux-arm64-musl@npm:1.1.0"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/css-linux-x64-gnu@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@parcel/css-linux-x64-gnu@npm:1.1.0"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/css-linux-x64-musl@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@parcel/css-linux-x64-musl@npm:1.1.0"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/css-win32-x64-msvc@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@parcel/css-win32-x64-msvc@npm:1.1.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/css@npm:^1.0.3":
+  version: 1.1.0
+  resolution: "@parcel/css@npm:1.1.0"
+  dependencies:
+    "@parcel/css-darwin-arm64": 1.1.0
+    "@parcel/css-darwin-x64": 1.1.0
+    "@parcel/css-linux-arm-gnueabihf": 1.1.0
+    "@parcel/css-linux-arm64-gnu": 1.1.0
+    "@parcel/css-linux-arm64-musl": 1.1.0
+    "@parcel/css-linux-x64-gnu": 1.1.0
+    "@parcel/css-linux-x64-musl": 1.1.0
+    "@parcel/css-win32-x64-msvc": 1.1.0
+    detect-libc: ^1.0.3
+  dependenciesMeta:
+    "@parcel/css-darwin-arm64":
+      optional: true
+    "@parcel/css-darwin-x64":
+      optional: true
+    "@parcel/css-linux-arm-gnueabihf":
+      optional: true
+    "@parcel/css-linux-arm64-gnu":
+      optional: true
+    "@parcel/css-linux-arm64-musl":
+      optional: true
+    "@parcel/css-linux-x64-gnu":
+      optional: true
+    "@parcel/css-linux-x64-musl":
+      optional: true
+    "@parcel/css-win32-x64-msvc":
+      optional: true
+  checksum: 97a5ef836ef2cb3926ff047a1e8c97359cb391606ec3017e19d5e65c517c6d3ae95963f7ebf097c33103d8990dc6c2a4d502e430a627b114b58fe17091497e51
+  languageName: node
+  linkType: hard
+
 "@parcel/diagnostic@npm:^2.2.1":
   version: 2.2.1
   resolution: "@parcel/diagnostic@npm:2.2.1"
@@ -663,6 +753,20 @@ __metadata:
     micromatch: ^4.0.4
     nullthrows: ^1.1.1
   checksum: 89712e8647edf93066fa7770c01e8653a350d612515d974c05839f31b01459c3352dff9644f911589e7c636f121d50ac3ffe9f4a0348cb279354f092ce72ba6d
+  languageName: node
+  linkType: hard
+
+"@parcel/optimizer-css@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@parcel/optimizer-css@npm:2.2.1"
+  dependencies:
+    "@parcel/css": ^1.0.3
+    "@parcel/plugin": ^2.2.1
+    "@parcel/source-map": ^2.0.0
+    "@parcel/utils": ^2.2.1
+    browserslist: ^4.6.6
+    nullthrows: ^1.1.1
+  checksum: b7663430709ee1f878a662d372a81e0c282f426e2df5746fffbd2cc54cb29fe2cd8102ed6a858e2b3278f092977f36da65f531f33916f6d345fee060ebaca7c5
   languageName: node
   linkType: hard
 
@@ -937,6 +1041,20 @@ __metadata:
     nullthrows: ^1.1.1
     semver: ^5.7.0
   checksum: 52f5e9b1998ad03ebb3220d4809d3476cb38097d71ebde2f1e2e824f9555f51623c01696c9c6d114e25a23f2109c1f11a2113d0a67732a1fd0b9673195301c95
+  languageName: node
+  linkType: hard
+
+"@parcel/transformer-css-experimental@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@parcel/transformer-css-experimental@npm:2.2.1"
+  dependencies:
+    "@parcel/css": ^1.0.3
+    "@parcel/plugin": ^2.2.1
+    "@parcel/source-map": ^2.0.0
+    "@parcel/utils": ^2.2.1
+    browserslist: ^4.6.6
+    nullthrows: ^1.1.1
+  checksum: 2ea10260d2713d6ca2e3dfaf85d8cc859fe4881781c45fe259713e3a4e07f35049cfa8c14014139c92524afb10b7af08cb7652a6c14b1ec364ed25eca6c20493
   languageName: node
   linkType: hard
 
@@ -1506,13 +1624,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 4079f4f959cd4a4bfaeda8b89fe8a1b1f8bdc9d87acfdc5f74a0b39cec9ec6a470724357c62778c0f063180b360c250e920c5a142f1dbcda67d9cc25a6d43a85
-  languageName: node
-  linkType: hard
-
-"@types/retry@npm:^0.12.1":
-  version: 0.12.1
-  resolution: "@types/retry@npm:0.12.1"
-  checksum: 5f46b2556053655f78262bb33040dc58417c900457cc63ff37d6c35349814471453ef511af0cec76a540c601296cd2b22f64bab1ab649c0dacc0223765ba876c
   languageName: node
   linkType: hard
 
@@ -2166,6 +2277,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "brs-parcel@workspace:."
   dependencies:
+    "@parcel/optimizer-css": ^2.2.1
+    "@parcel/transformer-css-experimental": ^2.2.1
     "@parcel/transformer-svg-react": ^2.2.1
     "@parcel/validator-typescript": ^2.2.1
     "@tailwindcss/aspect-ratio": ^0.4.0
@@ -2179,13 +2292,13 @@ __metadata:
     classnames: ^2.3.1
     cssnano-preset-advanced: ^5.1.10
     express: ^4.17.2
-    p-retry: ^5.0.0
     parcel: ^2.2.1
     postcss: ^8.4.5
     react: ^17.0.2
     react-dom: ^17.0.2
     rimraf: ^3.0.2
     tailwindcss: ^3.0.15
+    ts-retry: ^2.3.9
     ts-standard: ^11.0.0
     typescript: ^4.5.4
   languageName: unknown
@@ -5614,16 +5727,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-retry@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "p-retry@npm:5.0.0"
-  dependencies:
-    "@types/retry": ^0.12.1
-    retry: ^0.13.1
-  checksum: 1139a65945439024713078cfaca39a43cc3da80a685a90e3890492d3f1ea31fba1a3abc5bb3d2823214803bad6fbd1a76dfb0f0d0d5e098a057fae1dee99a2cb
-  languageName: node
-  linkType: hard
-
 "p-try@npm:^1.0.0":
   version: 1.0.0
   resolution: "p-try@npm:1.0.0"
@@ -6700,13 +6803,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"retry@npm:^0.13.1":
-  version: 0.13.1
-  resolution: "retry@npm:0.13.1"
-  checksum: 47c4d5be674f7c13eee4cfe927345023972197dbbdfba5d3af7e461d13b44de1bfd663bfc80d2f601f8ef3fc8164c16dd99655a221921954a65d044a2fc1233b
-  languageName: node
-  linkType: hard
-
 "reusify@npm:^1.0.4":
   version: 1.0.4
   resolution: "reusify@npm:1.0.4"
@@ -7398,6 +7494,13 @@ __metadata:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: 952c29e2a85d7123239b5cfdd889a0dde47ab0497f0913d70588f19c53f7e0b5327c95f4651e413c74b785147f9637b17410ac8c846d5d4a20a5a33eb6dc3a45
+  languageName: node
+  linkType: hard
+
+"ts-retry@npm:^2.3.9":
+  version: 2.3.9
+  resolution: "ts-retry@npm:2.3.9"
+  checksum: 01dbdff43e96556d3074891811d4598d3d64ad1f76b81380447de3897ec768244ea2bfb54db42c68dac8fe6c83e919e4f79e0344c45cfff70aaff931b8bdbe3b
   languageName: node
   linkType: hard
 

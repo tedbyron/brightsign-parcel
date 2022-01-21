@@ -472,7 +472,7 @@
         }
       },
       "wssDeviceSpec": {},
-      "lastModifiedTime": "2022-01-20T23:17:08.986Z"
+      "lastModifiedTime": "2022-01-21T15:34:02.700Z"
     },
     "zones": {
       "zonesById": {
@@ -680,8 +680,8 @@
         "assetType": "HtmlSite",
         "scope": "80a3cdad3c472856",
         "locator": "file:///Users/ted/git/brs-parcel/dist/home/index.html",
-        "fileSize": 328,
-        "lastModifiedDate": "2022-01-20T23:12:50.189Z",
+        "fileSize": 155577,
+        "lastModifiedDate": "2022-01-21T15:31:06.690Z",
         "refCount": 1
       }
     },

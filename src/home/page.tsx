@@ -1,29 +1,24 @@
 import { useEffect, useState } from 'react'
-import retry from 'p-retry'
+import { retryAsyncUntilResponse } from 'ts-retry/lib/cjs/index'
 import classNames from 'classnames'
-
-/**
- * Fetch the node `process` variable from the local API.
- * @returns The `process` variable, formatted with `JSON.stringify`.
- */
-async function fetchProcess (): Promise<string> {
-  const res = await fetch('http://localhost:9001/node')
-  const json = await res.json()
-  return JSON.stringify(json, null, 2)
-}
 
 function IndexPage (): JSX.Element {
   const [clickCount, setClickCount] = useState(0)
   const [process, setProcess] = useState('Loading...')
 
   useEffect(() => {
-    retry(fetchProcess, { retries: 5 })
+    const retryOptions = { delay: 1000, maxTry: 5 }
+
+    retryAsyncUntilResponse(async () => {
+      return await fetch('http://localhost:9001/node')
+    }, retryOptions)
+      .then(async (res) => await res.json())
       .then((json) => {
-        setProcess(json)
+        setProcess(JSON.stringify(json, null, 2))
       })
       .catch((err) => {
         console.error(err)
-        setProcess('Error: failed to fetch from local endpoint')
+        setProcess(`Error: failed to fetch from local endpoint; tried ${retryOptions.maxTry} times.`)
       })
   }, [])
 
@@ -56,6 +51,8 @@ function IndexPage (): JSX.Element {
         </svg>
         <span>{process}</span>
       </div>
+
+      <span className='mx-auto'>{navigator.userAgent}</span>
     </div>
   )
 }
