@@ -472,7 +472,7 @@
         }
       },
       "wssDeviceSpec": {},
-      "lastModifiedTime": "2022-01-20T23:13:37.486Z"
+      "lastModifiedTime": "2022-01-20T23:17:08.986Z"
     },
     "zones": {
       "zonesById": {
@@ -595,7 +595,7 @@
             "type": "Html",
             "siteId": "8e311ba3-f27b-4ed4-be05-2a77b5e3c01d",
             "enableBrightSignJavascriptObjects": false,
-            "enableCrossDomainPolicyChecks": false,
+            "enableCrossDomainPolicyChecks": true,
             "ignoreHttpsCertificateErrors": true,
             "enableCamera": false,
             "enableMouseEvents": true,

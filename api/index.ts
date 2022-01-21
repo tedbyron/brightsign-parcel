@@ -50,7 +50,7 @@ const filteredProcess: { [key: string]: any } =
 async function getInterfaceStatuses (): Promise<NetworkInterfaceStatus[]> {
   const ifaces: NetworkInterfaces = await ns.getPresentNetworkInterfaces()
 
-  return await Promise.all(ifaces.map(iface => {
+  return await Promise.all(ifaces.map((iface) => {
     return ns.getInterfaceStatus(iface)
   }))
 }

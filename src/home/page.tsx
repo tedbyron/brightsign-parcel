@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import pRetry from 'p-retry'
+import retry from 'p-retry'
 import classNames from 'classnames'
 
 /**
@@ -14,16 +14,16 @@ async function fetchProcess (): Promise<string> {
 
 function IndexPage (): JSX.Element {
   const [clickCount, setClickCount] = useState(0)
-  const [process, setProcess] = useState('Loading…')
+  const [process, setProcess] = useState('Loading...')
 
   useEffect(() => {
-    pRetry(fetchProcess, { retries: 5 })
-      .then(json => {
+    retry(fetchProcess, { retries: 5 })
+      .then((json) => {
         setProcess(json)
       })
       .catch((err) => {
         console.error(err)
-        setProcess('Failed to fetch the process variable')
+        setProcess('Error: failed to fetch from local endpoint')
       })
   }, [])
 
@@ -47,7 +47,7 @@ function IndexPage (): JSX.Element {
 
       <div className='mx-auto flex items-center space-x-3 text-2xl'>
         <svg
-          className={classNames('animate-spin h-5 w-5', { hidden: process !== 'loading…' })}
+          className={classNames('animate-spin h-5 w-5', { hidden: process !== 'Loading...' })}
           fill='none'
           viewBox='0 0 24 24'
         >
