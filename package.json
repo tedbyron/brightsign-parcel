@@ -42,8 +42,6 @@
     "ts-retry": "^2.3.9"
   },
   "devDependencies": {
-    "@parcel/optimizer-css": "^2.2.1",
-    "@parcel/transformer-css-experimental": "^2.2.1",
     "@parcel/transformer-svg-react": "^2.2.1",
     "@parcel/validator-typescript": "^2.2.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
