@@ -680,12 +680,12 @@
       "ff425f2f-6cde-4598-9078-acd51b9fe865": {
         "id": "ff425f2f-6cde-4598-9078-acd51b9fe865",
         "name": "index.js",
-        "path": "/Users/ted/git/brs-parcel/dist/api/",
+        "path": "/Users/ted/git/brightsign-parcel/dist/api/",
         "networkId": 0,
         "location": "Local",
         "assetType": "HtmlSite",
         "scope": "80a3cdad3c472856",
-        "locator": "file:///Users/ted/git/brs-parcel/dist/api/index.js",
+        "locator": "file:///Users/ted/git/brightsign-parcel/dist/api/index.js",
         "fileSize": 603889,
         "lastModifiedDate": "2022-01-20T23:12:28.805Z",
         "refCount": 1
@@ -693,12 +693,12 @@
       "4e9b7a18-124f-4598-bf44-9a9f1c8b297b": {
         "id": "4e9b7a18-124f-4598-bf44-9a9f1c8b297b",
         "name": "index.html",
-        "path": "/Users/ted/git/brs-parcel/dist/home/",
+        "path": "/Users/ted/git/brightsign-parcel/dist/home/",
         "networkId": 0,
         "location": "Local",
         "assetType": "HtmlSite",
         "scope": "80a3cdad3c472856",
-        "locator": "file:///Users/ted/git/brs-parcel/dist/home/index.html",
+        "locator": "file:///Users/ted/git/brightsign-parcel/dist/home/index.html",
         "fileSize": 155577,
         "lastModifiedDate": "2022-01-21T15:31:06.690Z",
         "refCount": 1

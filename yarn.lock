@@ -2162,9 +2162,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"brs-parcel@workspace:.":
+"brightsign-parcel@workspace:.":
   version: 0.0.0-use.local
-  resolution: "brs-parcel@workspace:."
+  resolution: "brightsign-parcel@workspace:."
   dependencies:
     "@lifeomic/attempt": ^3.0.2
     "@parcel/transformer-svg-react": ^2.2.1
