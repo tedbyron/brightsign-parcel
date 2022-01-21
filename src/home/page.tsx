@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { retryAsyncUntilResponse } from 'ts-retry/lib/cjs/index'
+import { retry } from '@lifeomic/attempt'
 import classNames from 'classnames'
 
 function IndexPage (): JSX.Element {
@@ -7,18 +7,22 @@ function IndexPage (): JSX.Element {
   const [process, setProcess] = useState('Loading...')
 
   useEffect(() => {
-    const retryOptions = { delay: 1000, maxTry: 5 }
+    const retryOptions = {
+      delay: 1000,
+      maxAttempts: 10,
+      minDelay: 1000,
+      factor: 2,
+      jitter: true
+    }
 
-    retryAsyncUntilResponse(async () => {
-      return await fetch('http://localhost:9001/node')
-    }, retryOptions)
+    retry(async () => await fetch('http://localhost:9001/node'), retryOptions)
       .then(async (res) => await res.json())
       .then((json) => {
         setProcess(JSON.stringify(json, null, 2))
       })
       .catch((err) => {
         console.error(err)
-        setProcess(`Error: failed to fetch from local endpoint; tried ${retryOptions.maxTry} times.`)
+        setProcess(`Error: failed to fetch from local endpoint; tried ${retryOptions.maxAttempts} times.`)
       })
   }, [])
 
@@ -52,7 +56,7 @@ function IndexPage (): JSX.Element {
         <span>{process}</span>
       </div>
 
-      <span className='mx-auto'>{navigator.userAgent}</span>
+      <span className='mx-auto text-2xl'>{navigator.userAgent}</span>
     </div>
   )
 }

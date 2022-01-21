@@ -4,9 +4,9 @@
   "author": "Teddy Byron <ted@tedbyron.com>",
   "private": true,
   "packageManager": "yarn@3.1.1",
-  "browserslist": "chrome 60",
+  "browserslist": "chrome 69",
   "engines": {
-    "node": ">= 10"
+    "node": "10.15.3"
   },
   "targets": {
     "home": {
@@ -35,11 +35,11 @@
     "lint-fix": "ts-standard --report stylish --fix"
   },
   "dependencies": {
+    "@lifeomic/attempt": "^3.0.2",
     "classnames": "^2.3.1",
     "express": "^4.17.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "ts-retry": "^2.3.9"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@parcel/transformer-svg-react": "^2.2.1",

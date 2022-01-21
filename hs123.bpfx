@@ -26,7 +26,7 @@
         "htmlEnableJavascriptConsole": true,
         "alphabetizeVariableNames": false,
         "autoCreateMediaCounterVariables": false,
-        "resetVariablesOnPresentationStart": false,
+        "resetVariablesOnPresentationStart": true,
         "networkedVariablesUpdateInterval": 300,
         "delayScheduleChangeUntilMediaEndEvent": false,
         "language": "English",
@@ -472,7 +472,7 @@
         }
       },
       "wssDeviceSpec": {},
-      "lastModifiedTime": "2022-01-21T15:34:02.700Z"
+      "lastModifiedTime": "2022-01-21T18:25:42.137Z"
     },
     "zones": {
       "zonesById": {
@@ -640,8 +640,27 @@
       "sourcesById": {}
     },
     "userVariables": {
-      "variablesById": {},
-      "sequence": []
+      "variablesById": {
+        "25c7559d-b509-4d0c-9648-164b43f0f8ba": {
+          "id": "25c7559d-b509-4d0c-9648-164b43f0f8ba",
+          "name": "myVar",
+          "defaultValue": {
+            "params": [
+              {
+                "type": "Text",
+                "value": "0"
+              }
+            ]
+          },
+          "access": "Shared",
+          "isNetworked": false,
+          "dataFeedId": "0",
+          "systemVariable": null
+        }
+      },
+      "sequence": [
+        "25c7559d-b509-4d0c-9648-164b43f0f8ba"
+      ]
     },
     "liveText": {
       "itemsById": {},
@@ -727,9 +746,9 @@
     "eventDataById": {},
     "viewTransformByZoneId": {
       "aa8e3192-78ef-49c0-bbb3-c32a060d06f7": {
-        "x": 0,
-        "y": 0,
-        "k": 1
+        "x": 5.429934062356892,
+        "y": 0.3758062171182317,
+        "k": 0.9944701686732144
       }
     },
     "isLoaderEnabled": false

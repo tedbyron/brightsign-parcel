@@ -322,6 +322,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lifeomic/attempt@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@lifeomic/attempt@npm:3.0.2"
+  checksum: 4820ab2955517abb3b97740c5acc3e3b7d4f38232a2de15987dec45b855cf626bbbbe0a8d80d408ecc371be85315a25752a91888cc22d1e557aacaa2efa1b40a
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -2159,6 +2166,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "brs-parcel@workspace:."
   dependencies:
+    "@lifeomic/attempt": ^3.0.2
     "@parcel/transformer-svg-react": ^2.2.1
     "@parcel/validator-typescript": ^2.2.1
     "@tailwindcss/aspect-ratio": ^0.4.0
@@ -2178,7 +2186,6 @@ __metadata:
     react-dom: ^17.0.2
     rimraf: ^3.0.2
     tailwindcss: ^3.0.15
-    ts-retry: ^2.3.9
     ts-standard: ^11.0.0
     typescript: ^4.5.4
   languageName: unknown
@@ -7374,13 +7381,6 @@ __metadata:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: 952c29e2a85d7123239b5cfdd889a0dde47ab0497f0913d70588f19c53f7e0b5327c95f4651e413c74b785147f9637b17410ac8c846d5d4a20a5a33eb6dc3a45
-  languageName: node
-  linkType: hard
-
-"ts-retry@npm:^2.3.9":
-  version: 2.3.9
-  resolution: "ts-retry@npm:2.3.9"
-  checksum: 01dbdff43e96556d3074891811d4598d3d64ad1f76b81380447de3897ec768244ea2bfb54db42c68dac8fe6c83e919e4f79e0344c45cfff70aaff931b8bdbe3b
   languageName: node
   linkType: hard
 
