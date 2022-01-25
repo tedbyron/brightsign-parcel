@@ -6,8 +6,12 @@
       "@parcel/transformer-svg-react"
     ]
   },
+  "resolvers": [
+    "@parcel/resolver-glob",
+    "..."
+  ],
   "validators": {
-    "*.{ts,tsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "@parcel/validator-typescript"
     ]
   }

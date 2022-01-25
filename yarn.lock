@@ -876,6 +876,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/resolver-glob@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@parcel/resolver-glob@npm:2.2.1"
+  dependencies:
+    "@parcel/diagnostic": ^2.2.1
+    "@parcel/plugin": ^2.2.1
+    "@parcel/utils": ^2.2.1
+    micromatch: ^4.0.2
+    nullthrows: ^1.1.1
+  checksum: 7af6ef8eb9e07339f9a26c8bc743ea0cba1bbd7ddd3837b4a4f9cbbb32430bf11fada479d5e1465369e2b758494eb02b1610f02895a1a3cc711b05a00066474a
+  languageName: node
+  linkType: hard
+
 "@parcel/runtime-browser-hmr@npm:^2.2.1":
   version: 2.2.1
   resolution: "@parcel/runtime-browser-hmr@npm:2.2.1"
@@ -2092,6 +2105,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "brightsign-parcel@workspace:."
   dependencies:
+    "@parcel/resolver-glob": ^2.2.1
     "@parcel/transformer-svg-react": ^2.2.1
     "@parcel/validator-typescript": ^2.2.1
     "@tailwindcss/aspect-ratio": ^0.4.0
