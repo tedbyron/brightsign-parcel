@@ -11,6 +11,6 @@
 - `http://localhost:8008/GetUserVars`
 
 
-### UDP Variables
+### UDP - `dgram`
 - `http://localhost:8008/GetUDPEvents`
 - `http://localhost:8008/SendUDP`

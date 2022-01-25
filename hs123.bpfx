@@ -2,7 +2,7 @@
   "bsdm": {
     "sign": {
       "properties": {
-        "id": "1dc313ce-a599-433e-8467-319dc9a703bb",
+        "id": "deb33873-8ba6-4b39-9aeb-0eeb21770b7f",
         "version": "1.2.3-alpha-3",
         "name": "hs123",
         "videoMode": "1920x1080x60p",
@@ -472,7 +472,7 @@
         }
       },
       "wssDeviceSpec": {},
-      "lastModifiedTime": "2022-01-21T18:25:42.137Z"
+      "lastModifiedTime": "2022-01-21T20:37:39.272Z"
     },
     "zones": {
       "zonesById": {
@@ -677,6 +677,19 @@
     "partnerProducts": {},
     "customAutorun": "0",
     "assetMap": {
+      "4e9b7a18-124f-4598-bf44-9a9f1c8b297b": {
+        "id": "4e9b7a18-124f-4598-bf44-9a9f1c8b297b",
+        "name": "index.html",
+        "path": "/Users/ted/git/brightsign-parcel/dist/home/",
+        "networkId": 0,
+        "location": "Local",
+        "assetType": "HtmlSite",
+        "scope": "80a3cdad3c472856",
+        "locator": "file:///Users/ted/git/brightsign-parcel/dist/home/index.html",
+        "fileSize": 137397,
+        "lastModifiedDate": "2022-01-21T19:04:41.911Z",
+        "refCount": 1
+      },
       "ff425f2f-6cde-4598-9078-acd51b9fe865": {
         "id": "ff425f2f-6cde-4598-9078-acd51b9fe865",
         "name": "index.js",
@@ -687,20 +700,7 @@
         "scope": "80a3cdad3c472856",
         "locator": "file:///Users/ted/git/brightsign-parcel/dist/api/index.js",
         "fileSize": 603889,
-        "lastModifiedDate": "2022-01-20T23:12:28.805Z",
-        "refCount": 1
-      },
-      "4e9b7a18-124f-4598-bf44-9a9f1c8b297b": {
-        "id": "4e9b7a18-124f-4598-bf44-9a9f1c8b297b",
-        "name": "index.html",
-        "path": "/Users/ted/git/brightsign-parcel/dist/home/",
-        "networkId": 0,
-        "location": "Local",
-        "assetType": "HtmlSite",
-        "scope": "80a3cdad3c472856",
-        "locator": "file:///Users/ted/git/brightsign-parcel/dist/home/index.html",
-        "fileSize": 155577,
-        "lastModifiedDate": "2022-01-21T15:31:06.690Z",
+        "lastModifiedDate": "2022-01-21T19:04:40.635Z",
         "refCount": 1
       }
     },
@@ -738,7 +738,7 @@
       "f3e25f7a-8c34-4697-a3e9-487c7a346b1a": {
         "id": "f3e25f7a-8c34-4697-a3e9-487c7a346b1a",
         "position": {
-          "x": 554.2400512695312,
+          "x": 553.2344970703125,
           "y": 183
         }
       }
@@ -746,9 +746,9 @@
     "eventDataById": {},
     "viewTransformByZoneId": {
       "aa8e3192-78ef-49c0-bbb3-c32a060d06f7": {
-        "x": 5.429934062356892,
-        "y": 0.3758062171182317,
-        "k": 0.9944701686732144
+        "x": 0,
+        "y": 0,
+        "k": 1
       }
     },
     "isLoaderEnabled": false

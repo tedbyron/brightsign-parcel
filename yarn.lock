@@ -234,6 +234,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.15.4":
+  version: 7.16.7
+  resolution: "@babel/runtime@npm:7.16.7"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: 47912f0aaacd1cab2e2552aaf3e6eaffbcaf2d5ac9b07a89a12ac0d42029cb92c070b0d16f825e4277c4a34677c54d8ffe85e1f7c6feb57de58f700eec67ce2f
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/template@npm:7.16.7"
@@ -319,13 +328,6 @@ __metadata:
   version: 2.2.5
   resolution: "@iarna/toml@npm:2.2.5"
   checksum: b63b2b2c4fd67969a6291543ada0303d45593801ee744b60f5390f183c03d9192bc67a217abb24be945158f1935f02840d9ffff40c0142aa171b5d3b6b6a3ea5
-  languageName: node
-  linkType: hard
-
-"@lifeomic/attempt@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "@lifeomic/attempt@npm:3.0.2"
-  checksum: 4820ab2955517abb3b97740c5acc3e3b7d4f38232a2de15987dec45b855cf626bbbbe0a8d80d408ecc371be85315a25752a91888cc22d1e557aacaa2efa1b40a
   languageName: node
   linkType: hard
 
@@ -1968,6 +1970,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios-retry@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "axios-retry@npm:3.2.4"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    is-retry-allowed: ^2.2.0
+  checksum: 2a917a87cce979955f0f3b8c66e77e45913ae9ce39419028d9966af4d55eac8d7d8ab03d39bd864f62f8af48197b3e3938cef310cd5d85caab6b53b2d49e22ac
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "axios@npm:0.25.0"
+  dependencies:
+    follow-redirects: ^1.14.7
+  checksum: 2a8a3787c05f2a0c9c3878f49782357e2a9f38945b93018fb0c4fd788171c43dceefbb577988628e09fea53952744d1ecebde234b561f1e703aa43e0a598a3ad
+  languageName: node
+  linkType: hard
+
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
@@ -2067,6 +2088,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"brightsign-parcel@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "brightsign-parcel@workspace:."
+  dependencies:
+    "@parcel/transformer-svg-react": ^2.2.1
+    "@parcel/validator-typescript": ^2.2.1
+    "@tailwindcss/aspect-ratio": ^0.4.0
+    "@tailwindcss/line-clamp": ^0.3.1
+    "@tailwindcss/typography": ^0.5.0
+    "@types/express": ^4.17.13
+    "@types/node": ^17.0.10
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    autoprefixer: ^10.4.2
+    axios: ^0.25.0
+    axios-retry: ^3.2.4
+    classnames: ^2.3.1
+    cssnano-preset-advanced: ^5.1.10
+    express: ^4.17.2
+    parcel: ^2.2.1
+    postcss: ^8.4.5
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    rimraf: ^3.0.2
+    tailwindcss: ^3.0.15
+    ts-standard: ^11.0.0
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
+
 "brorand@npm:^1.0.1, brorand@npm:^1.1.0":
   version: 1.1.0
   resolution: "brorand@npm:1.1.0"
@@ -2161,35 +2212,6 @@ __metadata:
   checksum: c0777fd483691638fd6801e16c9d809e1d65f6d2b06db2e806654be51045cbab1452a89841a2c5caea2cbe19d621b4f1d391cffbb24512aa33280039ab345875
   languageName: node
   linkType: hard
-
-"brightsign-parcel@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "brightsign-parcel@workspace:."
-  dependencies:
-    "@lifeomic/attempt": ^3.0.2
-    "@parcel/transformer-svg-react": ^2.2.1
-    "@parcel/validator-typescript": ^2.2.1
-    "@tailwindcss/aspect-ratio": ^0.4.0
-    "@tailwindcss/line-clamp": ^0.3.1
-    "@tailwindcss/typography": ^0.5.0
-    "@types/express": ^4.17.13
-    "@types/node": ^17.0.10
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    autoprefixer: ^10.4.2
-    classnames: ^2.3.1
-    cssnano-preset-advanced: ^5.1.10
-    express: ^4.17.2
-    parcel: ^2.2.1
-    postcss: ^8.4.5
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    rimraf: ^3.0.2
-    tailwindcss: ^3.0.15
-    ts-standard: ^11.0.0
-    typescript: ^4.5.4
-  languageName: unknown
-  linkType: soft
 
 "buffer-from@npm:^1.0.0":
   version: 1.1.2
@@ -3784,7 +3806,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.0.0":
+"follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.14.7":
   version: 1.14.7
   resolution: "follow-redirects@npm:1.14.7"
   peerDependenciesMeta:
@@ -4551,6 +4573,13 @@ __metadata:
     call-bind: ^1.0.2
     has-tostringtag: ^1.0.0
   checksum: 362399b33535bc8f386d96c45c9feb04cf7f8b41c182f54174c1a45c9abbbe5e31290bbad09a458583ff6bf3b2048672cdb1881b13289569a7c548370856a652
+  languageName: node
+  linkType: hard
+
+"is-retry-allowed@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "is-retry-allowed@npm:2.2.0"
+  checksum: 3d1103a9290b5d03626756a41054844633eac78bc5d3e3a95b13afeae94fa3cfbcf7f0b5520d83f75f48a25ce7b142fdbac4217dc4b0630f3ea55e866ec3a029
   languageName: node
   linkType: hard
 
@@ -6582,7 +6611,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.7":
+"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
   version: 0.13.9
   resolution: "regenerator-runtime@npm:0.13.9"
   checksum: 65ed455fe5afd799e2897baf691ca21c2772e1a969d19bb0c4695757c2d96249eb74ee3553ea34a91062b2a676beedf630b4c1551cc6299afb937be1426ec55e

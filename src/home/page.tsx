@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { retry } from '@lifeomic/attempt'
+import axiosRetry from 'axios-retry'
+import axios from 'axios'
 import classNames from 'classnames'
 
 function IndexPage (): JSX.Element {
@@ -7,22 +8,16 @@ function IndexPage (): JSX.Element {
   const [process, setProcess] = useState('Loading...')
 
   useEffect(() => {
-    const retryOptions = {
-      delay: 1000,
-      maxAttempts: 10,
-      minDelay: 1000,
-      factor: 2,
-      jitter: true
-    }
+    const axiosRetryConfig = { retries: 10, retryDelay: axiosRetry.exponentialDelay }
+    axiosRetry(axios, axiosRetryConfig)
 
-    retry(async () => await fetch('http://localhost:9001/node'), retryOptions)
-      .then(async (res) => await res.json())
+    axios('http://localhost:9001/node')
       .then((json) => {
         setProcess(JSON.stringify(json, null, 2))
       })
       .catch((err) => {
         console.error(err)
-        setProcess(`Error: failed to fetch from local endpoint; tried ${retryOptions.maxAttempts} times.`)
+        setProcess(`Error: failed to fetch from local endpoint; tried ${axiosRetryConfig.retries} times.`)
       })
   }, [])
 
