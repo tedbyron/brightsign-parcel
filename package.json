@@ -29,7 +29,7 @@
   },
   "scripts": {
     "build": "rimraf dist/*; parcel build --no-source-maps",
-    "serve": "rimraf dist/home*; parcel serve --target home --open --lazy",
+    "serve": "rimraf dist/home*; parcel serve --target home",
     "watch": "rimraf dist/*; parcel watch",
     "clean": "rimraf dist; rimraf .parcel-cache",
     "lint": "ts-standard",
