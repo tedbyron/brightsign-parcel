@@ -24,15 +24,16 @@
     }
   },
   "ts-standard": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "report": "stylish"
   },
   "scripts": {
     "build": "rimraf dist/*; parcel build --no-source-maps",
     "serve": "rimraf dist/home*; parcel serve --target home --open --lazy",
     "watch": "rimraf dist/*; parcel watch",
     "clean": "rimraf dist; rimraf .parcel-cache",
-    "lint": "ts-standard --report stylish",
-    "lint-fix": "ts-standard --report stylish --fix"
+    "lint": "ts-standard",
+    "fix": "ts-standard --fix"
   },
   "dependencies": {
     "axios": "^0.25.0",
